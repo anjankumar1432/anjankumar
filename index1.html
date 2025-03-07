@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel India - Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url('https://www.w3schools.com/w3images/forest.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            background: linear-gradient(to right, rgba(123, 104, 238, 0.8), rgba(72, 61, 139, 0.8));
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .title h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .input input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+
+        .input button {
+            padding: 8px 12px; /* Decreased padding */
+            border-radius: 5px;
+            border: none;
+            background-color: #ff5733; /* Base color */
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+            font-size: 0.9rem; /* Decreased font size */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+
+        .input button:hover {
+            background-color: #e04e20; /* Darker shade on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        .img-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .img-container .card {
+            width: 180px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .img-container .card:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .img-container img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .img-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .card button {
+            padding: 8px 12px; /* Decreased padding */
+            border-radius: 5px;
+            border: none;
+            background-color: #007bff; /* Bootstrap primary color */
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+            font-size: 0.9rem; /* Decreased font size */
+            margin-top: 10px; /* Space between image and button */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+
+        .card button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .title {
+                flex-direction: column;
+                text-align: center;
+            }
+            .img-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .img-container .card {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+
+    <div class="title card">
+        <h1 class="card-title">TRAVEL INDIA</h1>
+        <div class="input">
+            <input type="text" placeholder="Search your destination...">
+            <button style="background-color: aqua;color:red;">Search</button>
+        </div>
+    </div>
+
+    <div class="img-container">
+        <div class="card">
+            <img class="rounded-circle" src="https://th.bing.com/th/id/OIP.ADvI0Usq24WQWE0If9qFTAHaE8?w=269&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" onclick="redirectTo('fp-flight(booking).html')" />
+            <button onclick="redirectTo('fp-flight(booking).html')"><i class="fas fa-plane"></i> Flight</button>
+        </div>
+        <div class="card">
+            <img class="rounded-circle" src="https://wallpaperaccess.com/full/1628641.jpg" onclick="redirectTo('fp-BUS(booking).html')" />
+            <button onclick="redirectTo('fp-BUS(booking).html')"><i class="fas fa-bus"></i> Bus</button>
+        </div>
+        <div class="card">
+            <img class="rounded-circle" src="https://i.pinimg.com/originals/63/57/64/6357647a969c909eb70620d90f9fb012.jpg" onclick="redirectTo('fp-car(booking).html')" />
+            <button onclick="redirectTo('fp-car(booking).html')"><i class="fas fa-car"></i> Cab</button>
+        </div>
+        <div class="card">
+            <img class="rounded-circle" src="https://www.collinsdictionary.com/images/full/train_172581671_1000.jpg" onclick="redirectTo('fp-train(booking).html')" />
+            <button onclick="redirectTo('fp-train(booking).html')"><i class="fas fa-train"></i> Train</button>
+        </div>
+        <div class="card">
+            <img class="rounded-circle" src="https://i.pinimg.com/originals/fa/aa/68/faaa681f12463895e1661bd061f7f89a.png" onclick="redirectTo('fp-auto(booking).html')" />
+            <button onclick="redirectTo('fp-auto(booking).html')"><i class="fas fa-bicycle"></i> Ola</button>
+        </div>
+        <div class="card">
+            <img class="rounded-circle" src="https://th.bing.com/th/id/R.e8d71e031008994fee6252b0b5439106?rik=B7P7V8oqN4jZWQ&riu=http%3a%2f%2fbikeindia.in%2fwp-content%2fuploads%2f2017%2f07%2f2017-Bike-India-Kawasaki-Ninja-1000-launch-web-2.jpg&ehk=5gUfwleVvwZG3wcKt6%2fDT5PKQCkIRuzbqZNk9RHvmis%3d&risl=&pid=ImgRaw&r=0" onclick="redirectTo('fp-bike(booking).html')" />
+            <button onclick="redirectTo('fp-bike(booking).html')"><i class="fas fa-motorcycle"></i> Rapido</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card m-4" style="background-color:red">
+                <img class="card-img-top m-3" src="https://www.adotrip.com/public/images/city/master_images/5f0d8f3f74726-Amravati_Attractions.jpg" style="width: 400px; height: 250px;" onclick="redirectTo('fp-1.html')" />
+                <h4 class="mt-3 text-center" onclick="redirectTo('fp-1.html')">Andhrapradesh</h4>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card m-4" style="background-color:pink">
+                <img class="card-img-top m-3" src="https://www.trawell.in/admin/images/upload/249844992Hyderabad_Main.jpg" style="width: 400px; height: 250px;" onclick="redirectTo('FP STATE-2.html')" />
+                <h4 class="mt-3 text-center" onclick="redirectTo('FP STATE-2.html')">Telangana</h4>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card m-4" style="background-color:deepskyblue">
+                <img class="card-img-top m-3" src="https://www.adotrip.com/public/images/city/master_images/5e4107a78f9be-Delhi_Red_fort.jpg" style="width: 400px; height: 250px;" onclick="redirectTo('fP STATE(DELHI)-5.html')" />
+                <h4 class="mt-3 text-center" onclick="redirectTo('fp state(DELHI)-5.html')">DELHI</h4>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card m-4" style="background-color:yellow">
+                <h4 class="mt-3 text-center" onclick="redirectTo('FP STATE(MAHARSTRA)-4.html')">MAHARSTRA</h4>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card m-4" style="background-color:rgba(123, 104, 238, 0.8)">
+                <h4 class="mt-3 text-center" onclick="redirectTo('fp state(kerla)-3.html')">KERALA</h4>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card m-4" style="background-color:GREEN">
+                <h4 class="mt-3 text-center" onclick="redirectTo('FP stste(tamilnadu)-6.html')">TAMILNADU</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
